@@ -40,6 +40,7 @@ export class PhysicianService {
     updatePhysicianDto: UpdatePhysicianDto,
   ): Promise<Physician> {
     const physician: Physician = new Physician();
+    physician.id = id;
     physician.name = updatePhysicianDto.name;
     physician.email = updatePhysicianDto.email;
     physician.phoneNumbers = updatePhysicianDto.phoneNumbers;
